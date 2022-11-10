@@ -859,9 +859,9 @@ public class TheSpy {
 
 	static void salaDeEquipamentos() {
 		
-		System.out.println("Você chega na sla 27B que é a sala de equipamento, e precebe que prescisa de uma senha para entrar.");
-		System.out.println("A senha e o numero da sala em octadecimal");
-                System.out.println("qual e a senha da sala?");
+		System.out.println("Você chega na sala 27B que é a sala de equipamento, e percebe que prescisa de uma senha para entrar.");
+		System.out.println("A senha e o número da sala em octal");
+                System.out.println("qual é a senha da sala?");
                 escolha = entrada.nextInt();
                 
                 for (int i = 0; i <= 1 && senha2 != 1173; i++) {
@@ -932,7 +932,7 @@ public class TheSpy {
 
 			switch (escolha) {
 			case 1:
-				System.out.printf("Você vasculha os papéis e consegue achar a fórmula%n"
+				System.out.printf("Você vasculha os papéis e consegue achar a fórmula\n"
 						+ "Pega a pasta e sai da sala discretamente.\n");
 
 				break;
@@ -965,8 +965,8 @@ public class TheSpy {
                                             System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
                                             System.out.println("Você tenta mover o cofre na tentaiva de ver algo gravado nele, e do nada cai um papel.");
                                             System.out.println("Que estava escrito 2277");
-                                            System.out.println("E o sistema de senha do cofre ia ate o numero 7. Sabendo disso você descobre que se trata de um numero octal");
-                                            System.out.println("Passe o numero 2277 para octal");
+                                            System.out.println("E o sistema de senha do cofre ia ate o número 7. Sabendo disso você descobre que se trata de um numero octal");
+                                            System.out.println("Passe o número 2277 para octal");
                                             escolha = entrada.nextInt();
                                             
                                             if (escolha == 4345){
@@ -975,7 +975,7 @@ public class TheSpy {
                                             } else {
                                                 System.out.println("Você não consegue descobir a senha desiste");
                                                 System.out.println("Você sai da sala e vai para o laboratorio");
-                                                 System.out.println("Você não consegue descobir a senha desiste");
+                                                System.out.println("Você não consegue descobir a senha desiste");
                                                 System.out.println("Você sai da sala e vai para o laboratorio");
                                                 System.out.println("Seguindo em frente, encontra a sala 31B.\n"
 				+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
