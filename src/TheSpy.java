@@ -893,7 +893,7 @@ public class TheSpy {
                                             System.out.println("Você não sabe a senha, mas mesmo mesmo assim tenta abrir");
                                             System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
                                             System.out.println("Você passa a mão no bau e percebe que a um relevo indicado 79");
-                                            System.out.println("Passa o numero 4f para hexadecimal");
+                                            System.out.println("Passa o numero 4f para decimal");
                                             escolha = entrada.nextInt();
                                             
                                             if (escolha == 79){
