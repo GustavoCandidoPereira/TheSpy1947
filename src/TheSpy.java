@@ -8,7 +8,7 @@ Igor José Maia
 João Pedro Trindade
 Nicole Maximiano
 
-1º Semestre - Análise e Desenvolvimento de Sistemas (PI)
+1º Semestre - Análise e Desenvolvimento de Sistemas 
 */
 public class TheSpy {
 //Scanner para inserção de dados
