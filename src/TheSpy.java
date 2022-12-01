@@ -762,7 +762,7 @@ public class TheSpy {
 		} else {
 			System.out.println("Falha em obter a informação de...");
 			System.out.println("A única opção que restou é pegá-la à força!");
-			System.out.printf("\nVocê vai até o quarto e espera o retorno de Gunter com a arma em punho"
+			System.out.printf("\nVocê vai até o quarto e espera o retorno de Roger com a arma em punho"
 					+ "para pegá-lo de surpresa na entrada!\n");
 
 			System.out.println(
@@ -772,7 +772,7 @@ public class TheSpy {
 			System.out.println("Você da uma coronhada nele.");
 
 		}
-		System.out.printf("\nVocê vai até o quarto e espera o retorno de Gunter com a arma em punho"
+		System.out.printf("\nVocê vai até o quarto e espera o retorno de Roger com a arma em punho"
 				+ "para pegá-lo de surpresa na entrada!\n");
 
 		System.out.println(
@@ -787,10 +787,10 @@ public class TheSpy {
 	static void faseDoisFormula() {
 
 		System.out.printf("===================================\n\n");
-		System.out.println("Você chega ao corredor que Gunter informou");
+		System.out.println("Você chega ao corredor que Roger informou");
 
 		if (confiancaRoger > 0) {
-			System.out.println("A sala de equipamentos que Gunter comentou está logo ali");
+			System.out.println("A sala de equipamentos que Roger comentou está logo ali");
 			System.out.println("------------------\n");
 			System.out.println("1. Explorar\n" + "2. Deixar para lá\n> ");
 			escolha = entrada.nextInt();
@@ -804,9 +804,12 @@ public class TheSpy {
 				+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
 				+ "Não há ninguém por perto, você se aproxima da porta e percebe o monitor.\n"
 				+ "Há um teclado solicitando senha\n[SENHA]");
-		System.out.println("Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
-		System.out.println("O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
-		System.out.println("\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
+		System.out.println(
+				"Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
+		System.out.println(
+				"O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
+		System.out.println(
+				"\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
 
 		escolha = entrada.nextInt();
 
@@ -832,112 +835,13 @@ public class TheSpy {
 
 			switch (escolha) {
 			case 1:
-				System.out.printf("Você vasculha os papéis e consegue achar a fórmula%n"
-						+ "Pega a pasta e sai da sala discretamente.\n");
-
-				break;
-			case 2:
-				System.out.printf("Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
-
-				if (confiancaRoger < 1) {
-					System.out.println("Gunter: \"É ELE!\"");
-					System.out.printf("Você se vira e vê Gunter na porta apontando pra dentro da sala\n"
-							+ "De repente, alarmes começam a soar. Você pega rapidamente o envelope "
-							+ "com a fórmula dentro e consegue sair correndo por um triz\n");
-					alarme = true;
-
-				} else {
-					System.out.println("Você abre um armário e acha uma pequena caixinha");
-					System.out.println("[OBTEVE] Kit de primeiros socorros");
-					kitSocorros = true;
-				}
-				break;
-			}
-		}
-                System.exit(0);
-		}
-
-	static void salaDeEquipamentos() {
-		
-		System.out.println("Você chega na sala 27B que é a sala de equipamento, e percebe que prescisa de uma senha para entrar.");
-		System.out.println("A senha e o número da sala em octal");
-                System.out.println("qual é a senha da sala?");
-                escolha = entrada.nextInt();
-                
-                for (int i = 0; i <= 1 && senha2 != 1173; i++) {
-			tentativasRestantes -= 1;
-			System.out.printf("[SENHA INVÁLIDA]\n %d tentativas restantes...\n> ", tentativasRestantes);
-			escolha = entrada.nextInt();
-                }
-                        
-                        if (escolha == 1173){
-                            System.out.println("Você entra na sala de equipamentos, e depara com armas e munição. Mas ainda a uma sala inteira para ver.");
-                            System.out.println("1- Continuar a explorar a sala");
-                            System.out.println("2- Sair e ir para o laboratirio");
-                            System.out.println("O que deseja fazer?");
-                            escolha = entrada.nextInt();
-                            
-                            switch(escolha){
-                                case 1: 
-                                    System.out.println("Você entra na sala e la no fundo você encontra um bau e um cofre nas paredes laderais");
-                                    System.out.println("Você pode tentar abrir eles ou sair da sala de equipamento.");
-                                    System.out.println("O que deseja fazer");
-                                    System.out.println("1- Abrir o bau");
-                                    System.out.println("2- Abrir o cofre");
-                                    System.out.println("3- Sair da sala e ir pro labolatorio");
-                                    escolha = entrada.nextInt();
-                                    
-                                    switch(escolha){
-                                        case 1: 
-                                            System.out.println("Você vai em direção ao bau e nele a um cadeado numerico");
-                                            System.out.println("Você não sabe a senha, mas mesmo mesmo assim tenta abrir");
-                                            System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
-                                            System.out.println("Você passa a mão no bau e percebe que a um relevo indicado 79");
-                                            System.out.println("Passa o numero 4f para decimal");
-                                            escolha = entrada.nextInt();
-                                            
-                                            if (escolha == 79){
-                                                System.out.println("Você consegui abir o bau e nele havia uma bomba");
-                                                System.out.println("[Você adiquiriu uma Bomba]");
-                                            } else {
-                                                System.out.println("Você não consegue descobir a senha desiste");
-                                                System.out.println("Você sai da sala e vai para o laboratorio");
-                                                System.out.println("Seguindo em frente, encontra a sala 31B.\n"
-				+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
-				+ "Não há ninguém por perto, você se aproxima da porta e percebe o monitor.\n"
-				+ "Há um teclado solicitando senha\n[SENHA]");
-		System.out.println("Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
-		System.out.println("O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
-		System.out.println("\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
-
-		escolha = entrada.nextInt();
-
-		for (int i = 0; i <= 1 && senha != 1000101011; i++) {
-			tentativasRestantes -= 1;
-			System.out.printf("[SENHA INVÁLIDA]\n %d tentativas restantes...\n> ", tentativasRestantes);
-			escolha = entrada.nextInt();
-
-		}
-
-		if (tentativasRestantes == 1) {
-			alarme = true;
-		}
-
-		if (alarme) {
-			System.out.printf("Você extrapola o número de tentativas e os alarmes começam a soar.");
-		} else {
-			System.out.printf("A porta se destranca e você entra.\n" + "Seus olhos rapidamente se voltam aos papéis no canto.\n");
-			System.out.printf("1- Pegar a fórmula e sair\n" + "2- Explorar o laboratório\n> ");
-			escolha = entrada.nextInt();
-
-			switch (escolha) {
-			case 1:
 				System.out.printf("Você vasculha os papéis e consegue achar a fórmula\n"
 						+ "Pega a pasta e sai da sala discretamente.\n");
 
 				break;
 			case 2:
-				System.out.printf("Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
+				System.out.printf(
+						"Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
 
 				if (confiancaRoger < 1) {
 					System.out.println("Roger: \"É ELE!\"");
@@ -950,90 +854,355 @@ public class TheSpy {
 					System.out.println("Você abre um armário e acha uma pequena caixinha");
 					System.out.println("[OBTEVE] Kit de primeiros socorros");
 					kitSocorros = true;
-                                        System.exit(0);
 				}
 				break;
 			}
 		}
-                                            }
-                                            break;
-                                            
-                                        case 2:
-                                            
-                                            System.out.println("Você vai em direção ao cofre.");
-                                            System.out.println("Você não sabe a senha, mas mesmo mesmo assim tenta abrir");
-                                            System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
-                                            System.out.println("Você tenta mover o cofre na tentaiva de ver algo gravado nele, e do nada cai um papel.");
-                                            System.out.println("Que estava escrito 2277");
-                                            System.out.println("E o sistema de senha do cofre ia ate o número 7. Sabendo disso você descobre que se trata de um numero octal");
-                                            System.out.println("Passe o número 2277 para octal");
-                                            escolha = entrada.nextInt();
-                                            
-                                            if (escolha == 4345){
-                                                System.out.println("Você consegui abir o cofre e nele havia uma arma Especial");
-                                                System.out.println("[Você adiquiriu uma Arma]");
-                                            } else {
-                                                System.out.println("Você não consegue descobir a senha desiste");
-                                                System.out.println("Você sai da sala e vai para o laboratorio");
-                                                System.out.println("Você não consegue descobir a senha desiste");
-                                                System.out.println("Você sai da sala e vai para o laboratorio");
-                                                System.out.println("Seguindo em frente, encontra a sala 31B.\n"
-				+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
-				+ "Não há ninguém por perto, você se aproxima da porta e percebe o monitor.\n"
-				+ "Há um teclado solicitando senha\n[SENHA]");
-		System.out.println("Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
-		System.out.println("O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
-		System.out.println("\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
+		System.exit(0);
+	}
 
+	static void salaDeEquipamentos() {
+
+		System.out.println(
+				"Você chega na sala 27B que é a sala de equipamento, e percebe que prescisa de uma senha para entrar.");
+		System.out.println("A senha e o número da sala em octal");
+		System.out.println("qual é a senha da sala?");
 		escolha = entrada.nextInt();
 
-		for (int i = 0; i <= 1 && senha != 1000101011; i++) {
+		for (int i = 0; i <= 1 && senha2 != 1173; i++) {
 			tentativasRestantes -= 1;
 			System.out.printf("[SENHA INVÁLIDA]\n %d tentativas restantes...\n> ", tentativasRestantes);
 			escolha = entrada.nextInt();
-
 		}
 
-		if (tentativasRestantes == 1) {
-			alarme = true;
-		}
-
-		if (alarme) {
-			System.out.printf("Você extrapola o número de tentativas e os alarmes começam a soar.");
-		} else {
-			System.out.printf("A porta se destranca e você entra.\n" + "Seus olhos rapidamente se voltam aos papéis no canto.\n");
-			System.out.printf("1- Pegar a fórmula e sair\n" + "2- Explorar o laboratório\n> ");
+		if (escolha == 1173) {
+			System.out.println(
+					"Você entra na sala de equipamentos, e depara com armas e munição. Mas ainda a uma sala inteira para ver.");
+			System.out.println("1- Continuar a explorar a sala");
+			System.out.println("2- Sair e ir para o laboratirio");
+			System.out.println("O que deseja fazer?");
 			escolha = entrada.nextInt();
 
 			switch (escolha) {
 			case 1:
-				System.out.printf("Você vasculha os papéis e consegue achar a fórmula%n"
-						+ "Pega a pasta e sai da sala discretamente.\n");
+				System.out.println(
+						"Você entra na sala e la no fundo você encontra um bau e um cofre nas paredes laderais");
+				System.out.println("Você pode tentar abrir eles ou sair da sala de equipamento.");
+				System.out.println("O que deseja fazer");
+				System.out.println("1- Abrir o bau");
+				System.out.println("2- Abrir o cofre");
+				System.out.println("3- Sair da sala e ir pro labolatorio");
+				escolha = entrada.nextInt();
 
-				break;
-			case 2:
-				System.out.printf("Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
+				switch (escolha) {
+				case 1:
+					System.out.println("Você vai em direção ao bau e nele a um cadeado numerico");
+					System.out.println("Você não sabe a senha, mas mesmo mesmo assim tenta abrir");
+					System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
+					System.out.println("Você passa a mão no bau e percebe que a um relevo indicado 79");
+					System.out.println("Passa o numero 4f para decimal");
+					escolha = entrada.nextInt();
 
-				if (confiancaRoger < 1) {
-					System.out.println("Roger: \"É ELE!\"");
-					System.out.printf("Você se vira e vê Roger na porta apontando pra dentro da sala\n"
-							+ "De repente, alarmes começam a soar. Você pega rapidamente o envelope "
-							+ "com a fórmula dentro e consegue sair correndo por um triz\n");
-					alarme = true;
+					if (escolha == 79) {
+						System.out.println("Você consegui abir o bau e nele havia uma bomba");
+						System.out.println("[Você adiquiriu uma Bomba]");
+					} else {
+						System.out.println("Você não consegue descobir a senha desiste");
+						System.out.println("Você sai da sala e vai para o laboratorio");
+						System.out.println("Seguindo em frente, encontra a sala 31B.\n"
+								+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
+								+ "Não há ninguém por perto, você se aproxima da porta e percebe o monitor.\n"
+								+ "Há um teclado solicitando senha\n[SENHA]");
+						System.out.println(
+								"Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
+						System.out.println(
+								"O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
+						System.out.println(
+								"\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
 
-				} else {
-					System.out.println("Você abre um armário e acha uma pequena caixinha");
-					System.out.println("[OBTEVE] Kit de primeiros socorros");
-					kitSocorros = true;
-                                        System.exit(0);
+						escolha = entrada.nextInt();
+
+						for (int i = 0; i <= 1 && senha != 1000101011; i++) {
+							tentativasRestantes -= 1;
+							System.out.printf("[SENHA INVÁLIDA]\n %d tentativas restantes...\n> ", tentativasRestantes);
+							escolha = entrada.nextInt();
+
+						}
+
+						if (tentativasRestantes == 1) {
+							alarme = true;
+						}
+
+						if (alarme) {
+							System.out.printf("Você extrapola o número de tentativas e os alarmes começam a soar.");
+						} else {
+							System.out.printf("A porta se destranca e você entra.\n"
+									+ "Seus olhos rapidamente se voltam aos papéis no canto.\n");
+							System.out.printf("1- Pegar a fórmula e sair\n" + "2- Explorar o laboratório\n> ");
+							escolha = entrada.nextInt();
+
+							switch (escolha) {
+							case 1:
+								System.out.printf("Você vasculha os papéis e consegue achar a fórmula\n"
+										+ "Pega a pasta e sai da sala discretamente.\n");
+
+								break;
+							case 2:
+								System.out.printf(
+										"Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
+
+								if (confiancaRoger < 1) {
+									System.out.println("Roger: \"É ELE!\"");
+									System.out.printf("Você se vira e vê Roger na porta apontando pra dentro da sala\n"
+											+ "De repente, alarmes começam a soar. Você pega rapidamente o envelope "
+											+ "com a fórmula dentro e consegue sair correndo por um triz\n");
+									alarme = true;
+
+								} else {
+									System.out.println("Você abre um armário e acha uma pequena caixinha");
+									System.out.println("[OBTEVE] Kit de primeiros socorros");
+									kitSocorros = true;
+									System.exit(0);
+								}
+								break;
+							}
+						}
+					}
+					break;
+
+				case 2:
+
+					System.out.println("Você vai em direção ao cofre.");
+					System.out.println("Você não sabe a senha, mas mesmo mesmo assim tenta abrir");
+					System.out.println("Pelo o cadeado você percebe que e um numero hexadecimal");
+					System.out.println(
+							"Você tenta mover o cofre na tentaiva de ver algo gravado nele, e do nada cai um papel.");
+					System.out.println("Que estava escrito 2277");
+					System.out.println(
+							"E o sistema de senha do cofre ia ate o número 7. Sabendo disso você descobre que se trata de um numero octal");
+					System.out.println("Passe o número 2277 para octal");
+					escolha = entrada.nextInt();
+
+					if (escolha == 4345) {
+						System.out.println("Você consegui abir o cofre e nele havia uma arma Especial");
+						System.out.println("[Você adiquiriu uma Arma]");
+					} else {
+						System.out.println("Você não consegue descobir a senha desiste");
+						System.out.println("Você sai da sala e vai para o laboratorio");
+						System.out.println("Você não consegue descobir a senha desiste");
+						System.out.println("Você sai da sala e vai para o laboratorio");
+						System.out.println("Seguindo em frente, encontra a sala 31B.\n"
+								+ "É uma porta grande e reforçada, com os dizeres nazistas \"Arbeit macht frei\" (Trabalho liberta você) entalhados.\n"
+								+ "Não há ninguém por perto, você se aproxima da porta e percebe o monitor.\n"
+								+ "Há um teclado solicitando senha\n[SENHA]");
+						System.out.println(
+								"Você percebe que no teclado só tem opções de numeros 0 e 1.\nLogo supõe que se trata de um código binário.\nNo seu relátario você teve acesso a data de nascimento do doutor quer seria 11/10/1897");
+						System.out.println(
+								"O monitor tem espaço para 10 digitos logo, você supõe que seria o dia e mês da data de nascimento do doutor.");
+						System.out.println(
+								"\nConsegue preencher a senha? Dica: converta 1110 para binário e utilize os 10 primeiros números");
+
+						escolha = entrada.nextInt();
+
+						for (int i = 0; i <= 1 && senha != 1000101011; i++) {
+							tentativasRestantes -= 1;
+							System.out.printf("[SENHA INVÁLIDA]\n %d tentativas restantes...\n> ", tentativasRestantes);
+							escolha = entrada.nextInt();
+
+						}
+
+						if (tentativasRestantes == 1) {
+							alarme = true;
+						}
+
+						if (alarme) {
+							System.out.printf("Você extrapola o número de tentativas e os alarmes começam a soar.");
+						} else {
+							System.out.printf("A porta se destranca e você entra.\n"
+									+ "Seus olhos rapidamente se voltam aos papéis no canto.\n");
+							System.out.printf("1- Pegar a fórmula e sair\n" + "2- Explorar o laboratório\n> ");
+							escolha = entrada.nextInt();
+
+							switch (escolha) {
+							case 1:
+								System.out.printf("Você vasculha os papéis e consegue achar a fórmula\n"
+										+ "Pega a pasta e sai da sala discretamente.\n");
+
+								break;
+							case 2:
+								System.out.printf(
+										"Ao reparar melhor na sala, você percebe tanques cilindricos com criaturas humanóides estranhas dentro.\nDeve ser isso que a vacina faz...\n");
+
+								if (confiancaRoger < 1) {
+									System.out.println("Roger: \"É ELE!\"");
+									System.out.printf("Você se vira e vê Roger na porta apontando pra dentro da sala\n"
+											+ "De repente, alarmes começam a soar. Você pega rapidamente o envelope "
+											+ "com a fórmula dentro e consegue sair correndo por um triz\n");
+									alarme = true;
+
+								} else {
+									System.out.println("Você abre um armário e acha uma pequena caixinha");
+									System.out.println("[OBTEVE] Kit de primeiros socorros");
+									kitSocorros = true;
+									System.exit(0);
+								}
+								break;
+							}
+						}
+						break;
+					}
 				}
-				break;
-                                    }
-                                            break;
-                            }
-                        }
-                   }
-             }
-       }
+			}
+			faseFinal();
+		}
 	}
-	}                   
+
+// Fase final, responsável por decidir o que irá fazer com a fórmula
+	static void faseFinal() {
+
+		System.out.println("Você finalmente consegue entrar no carro e escapar"
+				+ " da base! Com a fórmula nazista em mãos, \n" + "é hora de voltar para o seu país.");
+
+		if (bondade >= maldade + 3) {
+
+			System.out.println("Você desembarca em Londres e segue diretamente" + " para a sede do MI6, em Vauxhall. \n"
+					+ "Sua chegada é esperada com grandes espectativas. O chefe"
+					+ "da SIS e o Primeiro-Ministro estão \n" + "lhe esperando.");
+
+			System.out
+					.println("Você então entrega a fórmula a eles e conta " + "tudo o que descobriu nos meses em que \n"
+							+ "ficou na base nazista. \n\n" + "Primeiro Ministro: '" + nomeJogador + ", você salvou a"
+							+ "nação. Parabéns!' \n" + "Chefe do SIS: '" + nomeJogador + ", você é um herói "
+							+ "! Aproveite seu descanso \n" + "porque em breve novas missões surgirão.'\n");
+			System.out.println("\n[ FIM DE JOGO ]");
+			System.exit(0);
+
+		} else if (bondade < maldade + 3) {
+
+			System.out.println(
+					"Você desembarca em Londres e antes de se " + "dirigir ao MI6 é abordado por um de sesus \n"
+							+ "informantes da capital britânica. Ele conta que os "
+							+ "boatos dos planos nazistas se espalharam por \n"
+							+ "outros países e que alguns governos estão interessados "
+							+ "no trabalho que os nazistas desenvolveram.");
+
+			System.out.println("--------------- \n");
+			System.out.print(
+					"1. Pedir mais informações \n" + "2. Perguntar se o governo sabe sobre isso \n" + "> ");
+			escolha = entrada.nextInt();
+
+			switch (escolha) {
+
+			case 1:
+
+				System.out.println("Informante: 'Corre nas ruas que o " + "governo russo e o governo americano estão "
+						+ "interessados \n" + "no segredo nazista e dispostos a pagar uma boa " + "quantia por eles.'");
+				break;
+
+			case 2:
+
+				System.out.println("Informante: 'O governo foi "
+						+ "informado sobre esse interesse, mas acredita " + "que não existem \n"
+						+ "riscos porque a fórmula está contigo, um fiel " + "espião.'");
+				break;
+
+			}
+
+			System.out.println("--------------- \n");
+			System.out.print("1. Continuar o plano e entregar a fórmula ao " + "governo do seu país \n"
+					+ "2. Entregar a fórmula a outro governo \n" + "> ");
+			escolha = entrada.nextInt();
+
+			switch (escolha) {
+
+			case 1:
+
+				System.out.println("Informante: 'Tem certeza? É uma " + "quantia enorme de dinheiro!'");
+
+				System.out.println("--------------- \n");
+				System.out.print("1. Sim \n" + "2. Não \n" + "> ");
+				escolha = entrada.nextInt();
+
+				switch (escolha) {
+
+				case 1:
+
+					System.out.println("Você segue então para a sede " + "do MI6, em Vauxhall. Sua chegada é "
+							+ "esperada com \n " + "grandes espectativas. O chefe da SIS e "
+							+ "o Primeiro-Ministro estão lhe " + "esperando.");
+
+					System.out.println("Você então entrega a fórmula a " + "eles e conta tudo o que descobriu nos "
+							+ "meses em que \n" + "ficou na base nazista. \n\n" + "Primeiro Ministro: '" + nomeJogador
+							+ ", " + "você salvou a nação. Parabéns!' \n" + "Chefe do SIS: '" + nomeJogador + ", "
+							+ "você é um herói! Aproveite " + "seu descanso porque em breve novas "
+							+ "missões surgirão.' \n");
+					System.out.println("\n[ FIM DE JOGO ]");
+					System.exit(0);
+
+				case 2:
+
+					System.out.println("--------------- \n");
+					System.out.print("1. Entregar a fórmula ao " + "governo russo \n"
+							+ "2. Entregar a fórmula ao governo " + "americano \n" + "> ");
+					escolha = entrada.nextInt();
+
+					switch (escolha) {
+
+					case 1:
+
+						System.out.println("Você embarca para a " + "Russia e vende a fórmula para eles. "
+								+ "Agora você faz parte \n" + "do serviço secreto russo, mais "
+								+ "conhecido como KGB, e sua missão é " + "destruir os americanos. \n");
+						System.out.println("\n[ FIM DE JOGO ]");
+						System.exit(0);
+						break;
+
+					case 2:
+
+						System.out.println("Você embarca para os " + "EUA e vende a fórmula para eles. "
+								+ "Agora você faz parte \n" + "do serviço secreto americano, mais "
+								+ "conhecido como CIA, e sua missão é " + "destruir os russos. \n");
+						System.out.println("\n[ FIM DE JOGO ]");
+						System.exit(0);
+						break;
+
+					}
+
+				}
+
+			case 2:
+
+				System.out.println("--------------- \n");
+				System.out.print("1. Entregar a fórmula ao governo " + "russo \n"
+						+ "2. Entregar a fórmula ao governo americano " + "\n" + "> ");
+				escolha = entrada.nextInt();
+
+				switch (escolha) {
+
+				case 1:
+
+					System.out.println("Você embarca para a " + "Russia e vende a fórmula para eles. "
+							+ "Agora você faz parte \n" + "do serviço secreto russo, mais "
+							+ "conhecido como KGB, e sua missão é " + "destruir os americanos. \n");
+					System.out.println("\n[ FIM DE JOGO ]");
+					System.exit(0);
+					break;
+
+				case 2:
+
+					System.out.println("Você embarca para os " + "EUA e vende a fórmula para eles. "
+							+ "Agora você faz parte \n" + "do serviço secreto americano, mais "
+							+ "conhecido como CIA, e sua missão é " + "destruir os russos. \n");
+					System.out.println("\n[ FIM DE JOGO ]");
+					System.exit(0);
+					break;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
